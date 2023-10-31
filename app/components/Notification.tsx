@@ -9,8 +9,8 @@ type NotificationProps = {
 
 export default function Notification({ text, handleClick }: NotificationProps) {
   return (
-    <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full py-12 flex items-start justify-center">
-      <div className="rounded p-4 bg-teal-900 text-teal-100 border border-teal-700 shadow-xl relative">
+    <div className="absolute bottom-0 left-0 w-full py-12 px-3 flex items-start justify-end">
+      <div className="relative rounded p-4 max-w-sm bg-teal-900 text-teal-100 border border-teal-700 shadow-2xl">
         <span>{text}</span>
         <button
           onClick={handleClick}

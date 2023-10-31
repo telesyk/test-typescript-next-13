@@ -1,4 +1,4 @@
-import CSSForm from '../components/Form'
+import MinifyCSSTool from '../components/MinifyCSSTool'
 
 export const metadata = {
   title: 'Tool | Create Next App',
@@ -10,7 +10,7 @@ export default async function Tool() {
   return (
     <>
       <h1 className="text-4xl leading-12">Tool page!</h1>
-      <CSSForm />
+      <MinifyCSSTool />
     </>
   )
 }
