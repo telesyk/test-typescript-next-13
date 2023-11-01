@@ -19,7 +19,7 @@ export default function RootLayout({
             <nav className="page-nav">
               <Link href="/">Home</Link>
               <Link href="/about">About</Link>
-              <Link href="/tool">Tool</Link>
+              <Link href="/tool">Tools</Link>
             </nav>
           </div>
         </header>

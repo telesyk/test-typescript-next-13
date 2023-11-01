@@ -24,8 +24,9 @@ function MinifyCSSTool() {
         setState(prevState => {
           return {
             ...prevState,
-            isNotificationVisible: !prevState.isNotificationVisible,
+            isNotificationVisible: false,
             notificationMessage: '',
+            isNotificationInClipbboard: false,
           }
         })
       }
@@ -70,20 +71,35 @@ function MinifyCSSTool() {
         outputCSS: minifiedCss,
         isNotificationVisible: true,
         notificationMessage:
-          minifiedCss.length > 0 ? '' : 'There is no any CSS to minimize',
+          minifiedCss.length === 0
+            ? 'There is no any CSS to minimize'
+            : 'CSS minimized',
       }
     })
   }
 
-  const handleCopyCSS = () => {
-    setState(prevState => {
-      return {
-        ...prevState,
-        isNotificationVisible: true,
-        notificationMessage: 'CSS copied!',
-        isNotificationInClipbboard: true,
-      }
-    })
+  const handleCopyCSS = async () => {
+    try {
+      setState(prevState => {
+        return {
+          ...prevState,
+          isNotificationVisible: true,
+          notificationMessage: 'CSS copied!',
+          isNotificationInClipbboard: true,
+        }
+      })
+      await navigator.clipboard.writeText(state.outputCSS)
+    } catch (err) {
+      console.error('Failed to copy: ', err)
+      setState(prevState => {
+        return {
+          ...prevState,
+          isNotificationVisible: true,
+          notificationMessage: 'Failed to copy',
+          isNotificationInClipbboard: false,
+        }
+      })
+    }
   }
 
   const handleNotification = () => {
@@ -91,7 +107,7 @@ function MinifyCSSTool() {
       return {
         ...prevState,
         isNotificationVisible: !prevState.isNotificationVisible,
-        isNotificationInClipbboard: !prevState.isNotificationInClipbboard,
+        isNotificationInClipbboard: false,
       }
     })
   }
@@ -159,7 +175,7 @@ function MinifyCSSTool() {
               Input CSS
             </label>
             <textarea
-              className="w-full h-[480px] p-4 rounded-md border-2 border-sky-800 bg-slate-800 text-zinc-100 focus:outline-none focus:border-sky-700"
+              className="w-full min-h-[360px] max-h-screen p-4 rounded-md border-2 border-sky-800 bg-slate-800 text-zinc-100 focus:outline-none focus:border-sky-700"
               name={nameInputCSS}
               id={nameInputCSS}
               onChange={handleInputCSSChange}
