@@ -2,14 +2,16 @@ import { FaXmark } from 'react-icons/fa6'
 
 type NotificationProps = {
   children: any
+  id: string
   options?: {
     type?: string // default (undefined), error, info, success
   }
-  handleClick: () => void
+  handleClick: (id: string) => void
 }
 
 export default function NotificationItem({
   children,
+  id,
   options,
   handleClick,
 }: NotificationProps) {
@@ -26,13 +28,14 @@ export default function NotificationItem({
 
   return (
     <div
+      id={id}
       className={`max-w-sm py-3 px-5 relative rounded-md border shadow-md backdrop-blur bg-slate-100/40 ${classes}`}
     >
       {children}
       <button
         className="w-8 h-8 absolute -top-4 -right-4 rounded-full bg-slate-200 flex items-center justify-center"
         type="button"
-        onClick={handleClick}
+        onClick={() => handleClick(id)}
       >
         <FaXmark />
       </button>

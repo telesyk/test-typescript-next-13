@@ -24,6 +24,7 @@
   },
   "devDependencies": {
     "@types/csso": "^5.0.0",
+    "@types/uuid": "^9.0.6",
     "autoprefixer": "^10.4.13",
     "eslint-config-prettier": "^8.6.0",
     "postcss": "^8.4.21",
