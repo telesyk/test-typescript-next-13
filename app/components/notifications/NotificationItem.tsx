@@ -9,7 +9,7 @@ type NotificationProps = {
   handleClick: (id: string) => void
 }
 
-export default function NotificationItem({
+export default function Notification({
   children,
   id,
   options,

@@ -3,7 +3,7 @@
 import React, { useEffect, useState } from 'react'
 import { minify } from 'csso'
 import { FaCopy, FaCheck, FaFileCode, FaTrash } from 'react-icons/fa6'
-import Notification from './Notification'
+import Notification from './notifications/NotificationItem'
 import TestCSSCode from './TestCSSCode'
 
 const nameInputCSS = 'cssInput'
@@ -191,12 +191,15 @@ function MinifyCSSTool() {
         </div>
       </div>
 
-      {isNotificationVisible && notificationMessage.length > 0 && (
-        <Notification
-          handleClick={handleNotification}
-          text={notificationMessage}
-        />
-      )}
+      <div className="fixed bottom-0 right-0 p-8 flex flex-col-reverse gap-4">
+        {isNotificationVisible && notificationMessage.length > 0 && (
+          <Notification
+            id="1"
+            handleClick={handleNotification}
+            children={notificationMessage}
+          />
+        )}
+      </div>
 
       <TestCSSCode />
     </>

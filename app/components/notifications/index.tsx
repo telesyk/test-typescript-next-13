@@ -1,8 +1,7 @@
 'use client'
-import { useState } from 'react'
-// import { FaXmark } from 'react-icons/fa6'
+import { useEffect, useState } from 'react'
 import { v4 as uuid } from 'uuid'
-import NotificationItem from './NotificationItem'
+import Notification from './NotificationItem'
 
 type Notification = {
   id: string
@@ -37,6 +36,17 @@ const messagesTest = [
 
 const NotificationsContainer = () => {
   const [notifications, setNotifications] = useState<Notification[]>([])
+
+  useEffect(() => {
+    if (notifications.length > 0) {
+      const lastNotificationId = notifications[0].id
+      const timer = setTimeout(() => {
+        setNotifications(prev => prev.filter(n => n.id !== lastNotificationId))
+      }, 3000)
+
+      return () => window.clearTimeout(timer)
+    }
+  }, [notifications])
 
   const closeNotification = (id: string) => {
     setNotifications(prev => prev.filter(n => n.id !== id))
@@ -93,7 +103,7 @@ const NotificationsContainer = () => {
           {/* Notification item */}
           {notifications.length > 0 &&
             notifications.map(({ id, text, options }) => (
-              <NotificationItem
+              <Notification
                 key={id}
                 id={id}
                 options={options}
