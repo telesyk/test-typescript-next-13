@@ -13,6 +13,7 @@ function MinifyCSSTool() {
     inputCSS: '',
     outputCSS: '',
     notificationMessage: '',
+    notificationType: '',
     isNotificationVisible: false,
     isFieldEmpty: true,
     isNotificationInClipbboard: false,
@@ -26,6 +27,7 @@ function MinifyCSSTool() {
             ...prevState,
             isNotificationVisible: false,
             notificationMessage: '',
+            notificationType: '',
             isNotificationInClipbboard: false,
           }
         })
@@ -59,6 +61,7 @@ function MinifyCSSTool() {
         isNotificationVisible:
           prevState.outputCSS.length > 0 && prevState.inputCSS.length > 0,
         notificationMessage: 'The code has been cleared',
+        notificationType: 'info',
       }
     })
   }
@@ -74,6 +77,7 @@ function MinifyCSSTool() {
           minifiedCss.length === 0
             ? 'There is no any CSS to minimize'
             : 'CSS minimized',
+        notificationType: minifiedCss.length === 0 ? 'warn' : 'success',
       }
     })
   }
@@ -85,6 +89,7 @@ function MinifyCSSTool() {
           ...prevState,
           isNotificationVisible: true,
           notificationMessage: 'CSS copied!',
+          notificationType: 'success',
           isNotificationInClipbboard: true,
         }
       })
@@ -96,6 +101,7 @@ function MinifyCSSTool() {
           ...prevState,
           isNotificationVisible: true,
           notificationMessage: 'Failed to copy',
+          notificationType: 'error',
           isNotificationInClipbboard: false,
         }
       })
@@ -118,6 +124,7 @@ function MinifyCSSTool() {
     isFieldEmpty,
     isNotificationVisible,
     notificationMessage,
+    notificationType,
     isNotificationInClipbboard,
   } = state
 
@@ -197,6 +204,7 @@ function MinifyCSSTool() {
             id="1"
             handleClick={handleNotification}
             children={notificationMessage}
+            options={{ type: notificationType }}
           />
         )}
       </div>

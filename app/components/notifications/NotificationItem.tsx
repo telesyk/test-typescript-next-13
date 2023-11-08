@@ -1,4 +1,4 @@
-import { FaXmark } from 'react-icons/fa6'
+import { FaXmark, FaCircle } from 'react-icons/fa6'
 
 type NotificationProps = {
   children: any
@@ -15,16 +15,53 @@ export default function Notification({
   options,
   handleClick,
 }: NotificationProps) {
+  const colorType =
+    options?.type === 'error'
+      ? 'rose-700'
+      : options?.type === 'info'
+      ? 'sky-700'
+      : options?.type === 'success'
+      ? 'emerald-700'
+      : options?.type === 'warn'
+      ? 'amber-700'
+      : 'slate-200'
+
   const classes =
     options?.type === 'error'
-      ? 'text-rose-900 border-rose-700 bg-rose-100/40'
+      ? `border-${colorType} text-rose-900 bg-rose-100/40`
       : options?.type === 'info'
-      ? 'text-sky-800 border-sky-700 bg-sky-100/40'
+      ? `border-${colorType} text-sky-800 bg-sky-100/40`
       : options?.type === 'success'
-      ? 'text-emerald-800 border-emerald-700 bg-emerald-100/40'
+      ? `border-${colorType} text-emerald-800 bg-emerald-100/40`
       : options?.type === 'warn'
-      ? 'text-amber-800 border-amber-700 bg-amber-100/40'
-      : 'text-slate-800 border-slate-200'
+      ? `border-${colorType} text-amber-800 bg-amber-100/40`
+      : `border-${colorType} text-slate-800`
+
+  const circleR = 15.5
+
+  const circleLength = 2 * circleR * 3.14
+
+  const circleStyles = {
+    fill: 'transparent',
+    stroke: 'currentColor',
+    'stroke-dasharray': circleLength /* (2 * r * PI) */,
+    'stroke-dashoffset': circleLength /* (2 * r * PI) */,
+    'transform-origin': 'center',
+    transform: 'rotate(-90deg)',
+    animation: 'circle-animation 3s ease-in-out infinite',
+  }
+
+  const circleAnimationCSS = `
+  @keyframes circle-animation {
+    0% {
+      stroke-dashoffset: ${circleLength};
+    }
+    100% {
+      stroke-dashoffset: 0;
+    }
+  }`
+
+  const circleClasses = `stroke-${colorType}`
 
   return (
     <div
@@ -38,6 +75,12 @@ export default function Notification({
         onClick={() => handleClick(id)}
       >
         <FaXmark />
+        <svg
+          className={`w-full h-full absolute top-0 left-0 bg-transparent ${circleClasses}`}
+        >
+          <circle cx="50%" cy="50%" r={circleR} style={circleStyles} />
+        </svg>
+        <style>{circleAnimationCSS}</style>
       </button>
     </div>
   )
