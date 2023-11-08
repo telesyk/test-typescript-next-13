@@ -1,4 +1,4 @@
-import { FaXmark, FaCircle } from 'react-icons/fa6'
+import { FaXmark } from 'react-icons/fa6'
 
 type NotificationProps = {
   children: any
@@ -9,78 +9,76 @@ type NotificationProps = {
   handleClick: (id: string) => void
 }
 
+const CIRCLE_RADIUS = 15.5
+const CIRCLE_LENGTH = 2 * CIRCLE_RADIUS * 3.14
+const CIRCLE_STYLES = {
+  fill: 'transparent',
+  strokeDasharray: CIRCLE_LENGTH,
+  strokeDashoffset: CIRCLE_LENGTH,
+  transformOrigin: 'center',
+  transform: 'rotate(-180deg)',
+  animation: 'circle-animation 3s ease-in-out infinite',
+}
+const CIRCLE_ANIMATION_CSS = `
+@keyframes circle-animation {
+  0% {
+    stroke-dashoffset: ${CIRCLE_LENGTH};
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}`
+
 export default function Notification({
   children,
   id,
   options,
   handleClick,
 }: NotificationProps) {
-  const colorType =
+  const notificationClasses =
     options?.type === 'error'
-      ? 'rose-700'
+      ? 'border-rose-700 text-rose-900 bg-rose-100/30'
       : options?.type === 'info'
-      ? 'sky-700'
+      ? 'border-sky-700 text-sky-900 bg-sky-100/30'
       : options?.type === 'success'
-      ? 'emerald-700'
+      ? 'border-emerald-700 text-emerald-900 bg-emerald-100/30'
       : options?.type === 'warn'
-      ? 'amber-700'
-      : 'slate-200'
+      ? 'border-amber-700 text-amber-900 bg-amber-100/30'
+      : 'border-slate-200 text-slate-800 bg-slate-100/30'
 
-  const classes =
+  const circleClasses =
     options?.type === 'error'
-      ? `border-${colorType} text-rose-900 bg-rose-100/40`
+      ? 'stroke-rose-700'
       : options?.type === 'info'
-      ? `border-${colorType} text-sky-800 bg-sky-100/40`
+      ? 'stroke-sky-700'
       : options?.type === 'success'
-      ? `border-${colorType} text-emerald-800 bg-emerald-100/40`
+      ? 'stroke-emerald-700'
       : options?.type === 'warn'
-      ? `border-${colorType} text-amber-800 bg-amber-100/40`
-      : `border-${colorType} text-slate-800`
-
-  const circleR = 15.5
-
-  const circleLength = 2 * circleR * 3.14
-
-  const circleStyles = {
-    fill: 'transparent',
-    stroke: 'currentColor',
-    'stroke-dasharray': circleLength /* (2 * r * PI) */,
-    'stroke-dashoffset': circleLength /* (2 * r * PI) */,
-    'transform-origin': 'center',
-    transform: 'rotate(-90deg)',
-    animation: 'circle-animation 3s ease-in-out infinite',
-  }
-
-  const circleAnimationCSS = `
-  @keyframes circle-animation {
-    0% {
-      stroke-dashoffset: ${circleLength};
-    }
-    100% {
-      stroke-dashoffset: 0;
-    }
-  }`
-
-  const circleClasses = `stroke-${colorType}`
+      ? 'stroke-amber-700'
+      : 'stroke-slate-200'
 
   return (
     <div
       id={id}
-      className={`max-w-sm py-3 px-5 relative rounded-md border shadow-md backdrop-blur bg-slate-100/40 ${classes}`}
+      className={`max-w-sm py-3 px-5 relative rounded-md border shadow-md backdrop-blur ${notificationClasses}`}
     >
       {children}
       <button
-        className="w-8 h-8 absolute -top-4 -right-4 rounded-full bg-slate-200 flex items-center justify-center"
+        className="w-8 h-8 absolute -top-4 -right-4 rounded-full bg-zinc-200 flex items-center justify-center"
         type="button"
         onClick={() => handleClick(id)}
       >
         <FaXmark />
-        <svg
-          className={`w-full h-full absolute top-0 left-0 bg-transparent ${circleClasses}`}
-        >
-          <circle cx="50%" cy="50%" r={circleR} style={circleStyles} />
+        <svg className="w-full h-full absolute top-0 left-0 fill-transparent">
+          <circle
+            cx="50%"
+            cy="50%"
+            r={CIRCLE_RADIUS}
+            style={CIRCLE_STYLES}
+            className={`${circleClasses}`}
+          />
         </svg>
-        <style>{circleAnimationCSS}</style>
+        <style>{CIRCLE_ANIMATION_CSS}</style>
       </button>
     </div>
   )
