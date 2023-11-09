@@ -7,7 +7,7 @@ export default async function Tool() {
   // throw new Error('Test error')
   return (
     <>
-      <h1 className="text-4xl leading-12">Tool page!</h1>
+      <h1 className="text-4xl text-center leading-10">Tool page!</h1>
     </>
   )
 }

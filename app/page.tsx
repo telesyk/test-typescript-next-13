@@ -8,9 +8,10 @@ export default function Home() {
     return route.tags?.includes('tool')
   })
   return (
-    <>
-      <h1 className="text-3xl">hello there!</h1>
-      <h2 className="text-2xl">home page!</h2>
+    <div className="max-w-lg mx-auto p-2 sm:p-8 lg:px-12 lg:py-14 rounded-xl bg-zinc-800/40">
+      <h1 className="text-4xl text-center leading-10">
+        Testing TypeScript and NextJS!
+      </h1>
       <div className="flex flex-col gap-4 max-w-lg mx-auto my-8">
         <h3 className="text-xl">All tools:</h3>
 
@@ -25,6 +26,6 @@ export default function Home() {
           </Link>
         ))}
       </div>
-    </>
+    </div>
   )
 }
