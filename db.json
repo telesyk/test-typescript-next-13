@@ -1,0 +1,929 @@
+{
+  "currencies": {
+    "AUD": {
+      "symbol": "AU$",
+      "name": "Australian Dollar",
+      "symbol_native": "$",
+      "decimal_digits": 2,
+      "rounding": 0,
+      "code": "AUD",
+      "name_plural": "Australian dollars",
+      "countries": [
+        "AU",
+        "CC",
+        "CX",
+        "HM",
+        "KI",
+        "NF",
+        "NR",
+        "TV"
+      ]
+    },
+    "CNY": {
+      "symbol": "CN¥",
+      "name": "Chinese Yuan",
+      "symbol_native": "CN¥",
+      "decimal_digits": 2,
+      "rounding": 0,
+      "code": "CNY",
+      "name_plural": "Chinese yuan",
+      "countries": [
+        "CN"
+      ]
+    },
+    "EUR": {
+      "symbol": "€",
+      "name": "Euro",
+      "symbol_native": "€",
+      "decimal_digits": 2,
+      "rounding": 0,
+      "code": "EUR",
+      "name_plural": "Euros",
+      "countries": [
+        "AD",
+        "AT",
+        "AX",
+        "BE",
+        "BL",
+        "CP",
+        "CY",
+        "DE",
+        "EA",
+        "EE",
+        "ES",
+        "EU",
+        "FI",
+        "FR",
+        "FX",
+        "GF",
+        "GP",
+        "GR",
+        "IC",
+        "IE",
+        "IT",
+        "LT",
+        "LU",
+        "LV",
+        "MC",
+        "ME",
+        "MF",
+        "MQ",
+        "MT",
+        "NL",
+        "PM",
+        "PT",
+        "RE",
+        "SI",
+        "SK",
+        "SM",
+        "TF",
+        "VA",
+        "XK",
+        "YT",
+        "ZW"
+      ]
+    },
+    "GBP": {
+      "symbol": "£",
+      "name": "British Pound Sterling",
+      "symbol_native": "£",
+      "decimal_digits": 2,
+      "rounding": 0,
+      "code": "GBP",
+      "name_plural": "British pounds sterling",
+      "countries": [
+        "GB",
+        "GG",
+        "GS",
+        "IM",
+        "JE",
+        "TA",
+        "UK",
+        "ZW"
+      ]
+    },
+    "GIP": {
+      "symbol": "£",
+      "name": "Gibraltar Pound",
+      "symbol_native": "£",
+      "decimal_digits": 2,
+      "rounding": 0,
+      "code": "GIP",
+      "icon_name": "gip",
+      "name_plural": "Gibraltar Pounds",
+      "countries": [
+        "GI"
+      ]
+    },
+    "HUF": {
+      "symbol": "Ft",
+      "name": "Hungarian Forint",
+      "symbol_native": "Ft",
+      "decimal_digits": 0,
+      "rounding": 0,
+      "code": "HUF",
+      "name_plural": "Hungarian forints",
+      "countries": [
+        "HU"
+      ]
+    },
+    "ILS": {
+      "symbol": "₪",
+      "name": "Israeli New Sheqel",
+      "symbol_native": "₪",
+      "decimal_digits": 2,
+      "rounding": 0,
+      "code": "ILS",
+      "name_plural": "Israeli new sheqels",
+      "countries": [
+        "IL",
+        "PS"
+      ]
+    },
+    "INR": {
+      "symbol": "Rs",
+      "name": "Indian Rupee",
+      "symbol_native": "টকা",
+      "decimal_digits": 2,
+      "rounding": 0,
+      "code": "INR",
+      "name_plural": "Indian rupees",
+      "countries": [
+        "BT",
+        "IN"
+      ]
+    },
+    "JPY": {
+      "symbol": "¥",
+      "name": "Japanese Yen",
+      "symbol_native": "￥",
+      "decimal_digits": 0,
+      "rounding": 0,
+      "code": "JPY",
+      "name_plural": "Japanese yen",
+      "countries": [
+        "JP"
+      ]
+    },
+    "MDL": {
+      "symbol": "MDL",
+      "name": "Moldovan Leu",
+      "symbol_native": "MDL",
+      "decimal_digits": 2,
+      "rounding": 0,
+      "code": "MDL",
+      "name_plural": "Moldovan lei",
+      "countries": [
+        "MD"
+      ]
+    },
+    "NPR": {
+      "symbol": "NPRs",
+      "name": "Nepalese Rupee",
+      "symbol_native": "नेरू",
+      "decimal_digits": 2,
+      "rounding": 0,
+      "code": "NPR",
+      "name_plural": "Nepalese rupees",
+      "countries": [
+        "NP"
+      ]
+    },
+    "PLN": {
+      "symbol": "zł",
+      "name": "Polish Zloty",
+      "symbol_native": "zł",
+      "decimal_digits": 2,
+      "rounding": 0,
+      "code": "PLN",
+      "name_plural": "Polish zlotys",
+      "countries": [
+        "PL"
+      ]
+    },
+    "TRY": {
+      "symbol": "TL",
+      "name": "Turkish Lira",
+      "symbol_native": "TL",
+      "decimal_digits": 2,
+      "rounding": 0,
+      "code": "TRY",
+      "name_plural": "Turkish Lira",
+      "countries": [
+        "TR"
+      ]
+    },
+    "UAH": {
+      "symbol": "₴",
+      "name": "Ukrainian Hryvnia",
+      "symbol_native": "₴",
+      "decimal_digits": 2,
+      "rounding": 0,
+      "code": "UAH",
+      "name_plural": "Ukrainian hryvnias",
+      "countries": [
+        "UA"
+      ]
+    },
+    "USD": {
+      "symbol": "$",
+      "name": "US Dollar",
+      "symbol_native": "$",
+      "decimal_digits": 2,
+      "rounding": 0,
+      "code": "USD",
+      "name_plural": "US dollars",
+      "countries": [
+        "AC",
+        "AS",
+        "BQ",
+        "DG",
+        "EC",
+        "FM",
+        "GU",
+        "HT",
+        "IO",
+        "MH",
+        "MP",
+        "PA",
+        "PR",
+        "PW",
+        "SV",
+        "TC",
+        "TL",
+        "UM",
+        "US",
+        "VG",
+        "VI",
+        "ZW"
+      ]
+    },
+    "XAF": {
+      "symbol": "FCFA",
+      "name": "CFA Franc BEAC",
+      "symbol_native": "FCFA",
+      "decimal_digits": 0,
+      "rounding": 0,
+      "code": "XAF",
+      "name_plural": "CFA francs BEAC",
+      "countries": [
+        "CF",
+        "CG",
+        "CM",
+        "GA",
+        "GQ",
+        "TD"
+      ]
+    },
+    "XAG": {
+      "symbol": "XAG",
+      "name": "Silver Ounce",
+      "symbol_native": "XAG",
+      "decimal_digits": 2,
+      "rounding": 0,
+      "code": "XAG",
+      "name_plural": "Silver Ounces",
+      "countries": []
+    },
+    "XAU": {
+      "symbol": "XAU",
+      "name": "Gold Ounce",
+      "symbol_native": "XAU",
+      "decimal_digits": 2,
+      "rounding": 0,
+      "code": "XAU",
+      "name_plural": "Gold Ounces",
+      "countries": []
+    },
+    "XCD": {
+      "symbol": "EC$",
+      "name": "East Caribbean Dollar",
+      "symbol_native": "$",
+      "decimal_digits": 2,
+      "rounding": 0,
+      "code": "XCD",
+      "icon_name": "xcd",
+      "name_plural": "East Caribbean Dollars",
+      "countries": [
+        "AG",
+        "AI",
+        "DM",
+        "GD",
+        "KN",
+        "LC",
+        "MS",
+        "VC"
+      ]
+    },
+    "XOF": {
+      "symbol": "CFA",
+      "name": "CFA Franc BCEAO",
+      "symbol_native": "CFA",
+      "decimal_digits": 0,
+      "rounding": 0,
+      "code": "XOF",
+      "name_plural": "CFA francs BCEAO",
+      "countries": [
+        "BF",
+        "BJ",
+        "CI",
+        "GW",
+        "ML",
+        "NE",
+        "SN",
+        "TG"
+      ]
+    },
+    "ZAR": {
+      "symbol": "R",
+      "name": "South African Rand",
+      "symbol_native": "R",
+      "decimal_digits": 2,
+      "rounding": 0,
+      "code": "ZAR",
+      "name_plural": "South African rand",
+      "countries": [
+        "LS",
+        "NA",
+        "ZA",
+        "ZW"
+      ]
+    },
+    "XPT": {
+      "symbol": "XPT",
+      "name": "Platinum Ounce",
+      "symbol_native": "XPT",
+      "decimal_digits": 6,
+      "rounding": 0,
+      "code": "XPT",
+      "name_plural": "Platinum Ounces",
+      "countries": []
+    },
+    "XPD": {
+      "symbol": "XPD",
+      "name": "Palladium Ounce",
+      "symbol_native": "XPD",
+      "decimal_digits": 6,
+      "rounding": 0,
+      "code": "XPD",
+      "name_plural": "Palladium Ounces",
+      "countries": []
+    },
+    "BTC": {
+      "symbol": "₿",
+      "name": "Bitcoin",
+      "symbol_native": "₿",
+      "decimal_digits": 8,
+      "rounding": 0,
+      "code": "BTC",
+      "name_plural": "Bitcoins",
+      "countries": []
+    },
+    "ETH": {
+      "symbol": "Ξ",
+      "name": "Ethereum",
+      "symbol_native": "Ξ",
+      "decimal_digits": 18,
+      "rounding": 0,
+      "code": "ETH",
+      "name_plural": "Ethereum",
+      "countries": []
+    },
+    "BNB": {
+      "symbol": "BNB",
+      "name": "Binance",
+      "symbol_native": "BNB",
+      "decimal_digits": 8,
+      "rounding": 0,
+      "code": "BNB",
+      "name_plural": "Binance",
+      "countries": []
+    },
+    "DOT": {
+      "symbol": "DOT",
+      "name": "Polkadot",
+      "symbol_native": "DOT",
+      "decimal_digits": 10,
+      "rounding": 0,
+      "code": "DOT",
+      "name_plural": "Polkadot",
+      "countries": []
+    },
+    "MATIC": {
+      "symbol": "MATIC",
+      "name": "Matic Token",
+      "symbol_native": "MATIC",
+      "decimal_digits": 18,
+      "rounding": 0,
+      "code": "MATIC",
+      "name_plural": "Matic Tokens",
+      "countries": []
+    },
+    "USDT": {
+      "symbol": "USDT",
+      "name": "Tether",
+      "symbol_native": "USDT",
+      "decimal_digits": 2,
+      "rounding": 0,
+      "code": "USDT",
+      "name_plural": "Tethers",
+      "countries": []
+    },
+    "BUSD": {
+      "symbol": "BUSD",
+      "name": "Binance USD",
+      "symbol_native": "BUSD",
+      "decimal_digits": 8,
+      "rounding": 0,
+      "code": "BUSD",
+      "name_plural": "Binance USD",
+      "countries": []
+    }
+  },
+  "latest": {
+    "EUR": {
+      "AUD": {
+        "code": "AUD",
+        "value": 1.6795194414
+      },
+      "BNB": {
+        "code": "BNB",
+        "value": 0.0043088708
+      },
+      "BTC": {
+        "code": "BTC",
+        "value": 0.0000287285
+      },
+      "BUSD": {
+        "code": "BUSD",
+        "value": 1.0675829745
+      },
+      "CNY": {
+        "code": "CNY",
+        "value": 7.7924896576
+      },
+      "DOT": {
+        "code": "DOT",
+        "value": 0.1869372014
+      },
+      "ETH": {
+        "code": "ETH",
+        "value": 0.0005219546
+      },
+      "EUR": {
+        "code": "EUR",
+        "value": 1
+      },
+      "GBP": {
+        "code": "GBP",
+        "value": 0.8742236967
+      },
+      "GIP": {
+        "code": "GIP",
+        "value": 0.8742153776
+      },
+      "HUF": {
+        "code": "HUF",
+        "value": 377.0432863519
+      },
+      "ILS": {
+        "code": "ILS",
+        "value": 4.1541899439
+      },
+      "INR": {
+        "code": "INR",
+        "value": 89.0185461315
+      },
+      "JPY": {
+        "code": "JPY",
+        "value": 161.9278028044
+      },
+      "MATIC": {
+        "code": "MATIC",
+        "value": 1.189195116
+      },
+      "MDL": {
+        "code": "MDL",
+        "value": 19.0546359838
+      },
+      "NPR": {
+        "code": "NPR",
+        "value": 142.2630545442
+      },
+      "PLN": {
+        "code": "PLN",
+        "value": 4.414893036
+      },
+      "TRY": {
+        "code": "TRY",
+        "value": 30.4702234598
+      },
+      "UAH": {
+        "code": "UAH",
+        "value": 39.2317660325
+      },
+      "USD": {
+        "code": "USD",
+        "value": 1.0689812353
+      },
+      "USDT": {
+        "code": "USDT",
+        "value": 1.067486216
+      },
+      "XAF": {
+        "code": "XAF",
+        "value": 655.8213365288
+      },
+      "XAG": {
+        "code": "XAG",
+        "value": 0.0479271012
+      },
+      "XAU": {
+        "code": "XAU",
+        "value": 0.0005510631
+      },
+      "XCD": {
+        "code": "XCD",
+        "value": 2.8862493354
+      },
+      "XOF": {
+        "code": "XOF",
+        "value": 655.8213503544
+      },
+      "XPD": {
+        "code": "XPD",
+        "value": 0.0011045662
+      },
+      "XPT": {
+        "code": "XPT",
+        "value": 0.0012579107
+      },
+      "ZAR": {
+        "code": "ZAR",
+        "value": 20.0184627948
+      }
+    },
+    "USD": {
+      "AUD": {
+        "code": "AUD",
+        "value": 1.5711402463
+      },
+      "BNB": {
+        "code": "BNB",
+        "value": 0.0040308198
+      },
+      "BTC": {
+        "code": "BTC",
+        "value": 0.0000268746
+      },
+      "BUSD": {
+        "code": "BUSD",
+        "value": 0.9986919688
+      },
+      "CNY": {
+        "code": "CNY",
+        "value": 7.2896412024
+      },
+      "DOT": {
+        "code": "DOT",
+        "value": 0.1748741654
+      },
+      "ETH": {
+        "code": "ETH",
+        "value": 0.000488273
+      },
+      "EUR": {
+        "code": "EUR",
+        "value": 0.9354701158
+      },
+      "GBP": {
+        "code": "GBP",
+        "value": 0.8178101428
+      },
+      "GIP": {
+        "code": "GIP",
+        "value": 0.8178023605
+      },
+      "HUF": {
+        "code": "HUF",
+        "value": 352.7127267452
+      },
+      "ILS": {
+        "code": "ILS",
+        "value": 3.8861205479
+      },
+      "INR": {
+        "code": "INR",
+        "value": 83.274189658
+      },
+      "JPY": {
+        "code": "JPY",
+        "value": 151.4786204407
+      },
+      "MATIC": {
+        "code": "MATIC",
+        "value": 1.1124564928
+      },
+      "MDL": {
+        "code": "MDL",
+        "value": 17.8250425303
+      },
+      "NPR": {
+        "code": "NPR",
+        "value": 133.0828361085
+      },
+      "PLN": {
+        "code": "PLN",
+        "value": 4.1300004996
+      },
+      "TRY": {
+        "code": "TRY",
+        "value": 28.5039834684
+      },
+      "UAH": {
+        "code": "UAH",
+        "value": 36.7001447135
+      },
+      "USD": {
+        "code": "USD",
+        "value": 1
+      },
+      "USDT": {
+        "code": "USDT",
+        "value": 0.9986014541
+      },
+      "XAF": {
+        "code": "XAF",
+        "value": 613.5012616267
+      },
+      "XAG": {
+        "code": "XAG",
+        "value": 0.0448343709
+      },
+      "XAU": {
+        "code": "XAU",
+        "value": 0.0005155031
+      },
+      "XCD": {
+        "code": "XCD",
+        "value": 2.7
+      },
+      "XOF": {
+        "code": "XOF",
+        "value": 613.5012745601
+      },
+      "XPD": {
+        "code": "XPD",
+        "value": 0.0010332887
+      },
+      "XPT": {
+        "code": "XPT",
+        "value": 0.0011767379
+      },
+      "ZAR": {
+        "code": "ZAR",
+        "value": 18.7266737088
+      }
+    },
+    "UAH": {
+      "AUD": {
+        "code": "AUD",
+        "value": 0.0428101921
+      },
+      "BNB": {
+        "code": "BNB",
+        "value": 0.0001098312
+      },
+      "BTC": {
+        "code": "BTC",
+        "value": 7.323e-7
+      },
+      "BUSD": {
+        "code": "BUSD",
+        "value": 0.0272122079
+      },
+      "CNY": {
+        "code": "CNY",
+        "value": 0.1986270425
+      },
+      "DOT": {
+        "code": "DOT",
+        "value": 0.0047649448
+      },
+      "ETH": {
+        "code": "ETH",
+        "value": 0.0000133044
+      },
+      "EUR": {
+        "code": "EUR",
+        "value": 0.0254895484
+      },
+      "GBP": {
+        "code": "GBP",
+        "value": 0.0222835672
+      },
+      "GIP": {
+        "code": "GIP",
+        "value": 0.0222833552
+      },
+      "HUF": {
+        "code": "HUF",
+        "value": 9.610663105
+      },
+      "ILS": {
+        "code": "ILS",
+        "value": 0.1058884257
+      },
+      "INR": {
+        "code": "INR",
+        "value": 2.2690425422
+      },
+      "JPY": {
+        "code": "JPY",
+        "value": 4.1274665706
+      },
+      "MATIC": {
+        "code": "MATIC",
+        "value": 0.0303120465
+      },
+      "MDL": {
+        "code": "MDL",
+        "value": 0.4856940666
+      },
+      "NPR": {
+        "code": "NPR",
+        "value": 3.6262210176
+      },
+      "PLN": {
+        "code": "PLN",
+        "value": 0.1125336298
+      },
+      "TRY": {
+        "code": "TRY",
+        "value": 0.7766722363
+      },
+      "USD": {
+        "code": "USD",
+        "value": 0.027247849
+      },
+      "USDT": {
+        "code": "USDT",
+        "value": 0.0272097416
+      },
+      "XAF": {
+        "code": "XAF",
+        "value": 16.7165897142
+      },
+      "XAG": {
+        "code": "XAG",
+        "value": 0.0012216402
+      },
+      "XAU": {
+        "code": "XAU",
+        "value": 0.0000140464
+      },
+      "XCD": {
+        "code": "XCD",
+        "value": 0.0735691922
+      },
+      "XOF": {
+        "code": "XOF",
+        "value": 16.7165900666
+      },
+      "XPD": {
+        "code": "XPD",
+        "value": 0.0000281549
+      },
+      "XPT": {
+        "code": "XPT",
+        "value": 0.0000320636
+      },
+      "ZAR": {
+        "code": "ZAR",
+        "value": 0.5102615768
+      }
+    },
+    "BTC": {
+      "AUD": {
+        "code": "AUD",
+        "value": 58461.8142792849
+      },
+      "BNB": {
+        "code": "BNB",
+        "value": 149.9859991986
+      },
+      "BTC": {
+        "code": "BTC",
+        "value": 1
+      },
+      "BUSD": {
+        "code": "BUSD",
+        "value": 37161.1283840997
+      },
+      "CNY": {
+        "code": "CNY",
+        "value": 271246.0909463317
+      },
+      "DOT": {
+        "code": "DOT",
+        "value": 6507.0327149461
+      },
+      "ETH": {
+        "code": "ETH",
+        "value": 18.1685391022
+      },
+      "EUR": {
+        "code": "EUR",
+        "value": 34808.6558806655
+      },
+      "GBP": {
+        "code": "GBP",
+        "value": 30430.5518216353
+      },
+      "GIP": {
+        "code": "GIP",
+        "value": 30430.2622438091
+      },
+      "HUF": {
+        "code": "HUF",
+        "value": 13124370.006737595
+      },
+      "ILS": {
+        "code": "ILS",
+        "value": 144601.7682210542
+      },
+      "INR": {
+        "code": "INR",
+        "value": 3098615.939289201
+      },
+      "JPY": {
+        "code": "JPY",
+        "value": 5636489.165331676
+      },
+      "MATIC": {
+        "code": "MATIC",
+        "value": 41394.2835661557
+      },
+      "MDL": {
+        "code": "MDL",
+        "value": 663266.2668917291
+      },
+      "NPR": {
+        "code": "NPR",
+        "value": 4951985.710160491
+      },
+      "PLN": {
+        "code": "PLN",
+        "value": 153676.4924388972
+      },
+      "TRY": {
+        "code": "TRY",
+        "value": 1060627.5230194945
+      },
+      "UAH": {
+        "code": "UAH",
+        "value": 1365605.0434175145
+      },
+      "USD": {
+        "code": "USD",
+        "value": 37209.7999634095
+      },
+      "USDT": {
+        "code": "USDT",
+        "value": 37157.7603504519
+      },
+      "XAF": {
+        "code": "XAF",
+        "value": 22828259.222428843
+      },
+      "XAG": {
+        "code": "XAG",
+        "value": 1668.2779726743
+      },
+      "XAU": {
+        "code": "XAU",
+        "value": 19.1817672315
+      },
+      "XCD": {
+        "code": "XCD",
+        "value": 100466.4599012056
+      },
+      "XOF": {
+        "code": "XOF",
+        "value": 22828259.703678068
+      },
+      "XPD": {
+        "code": "XPD",
+        "value": 38.4484658315
+      },
+      "XPT": {
+        "code": "XPT",
+        "value": 43.7861818684
+      },
+      "ZAR": {
+        "code": "ZAR",
+        "value": 696815.7826844873
+      }
+    }
+  }
+}
