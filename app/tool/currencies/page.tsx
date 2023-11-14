@@ -9,54 +9,50 @@ const API = {
   endpoints: ['latest', 'currencies'],
   baseCurrencies: ['BTC', 'EUR', 'UAH', 'USD'],
   availiable: [
-    'AUD',
     'CNY',
     'EUR',
     'GBP',
-    'GIP',
     'HUF',
-    'ILS',
     'INR',
     'JPY',
-    'MDL',
-    'NPR',
     'PLN',
     'TRY',
     'UAH',
     'USD',
-    'XAF',
-    'XAG',
-    'XAU',
-    'XCD',
-    'XOF',
-    'ZAR',
-    'XPT',
-    'XPD',
     'BTC',
     'ETH',
-    'BNB',
-    'DOT',
-    'MATIC',
     'USDT',
-    'BUSD',
   ],
 }
+const FAKE_ENDPOINT_LATEST = `${API.fakeUrl}/${API.endpoints[0]}`
+const FAKE_ENDPOINT_CURRENCIES = `${API.fakeUrl}/${API.endpoints[1]}`
 
 export const metadata = {
   title: 'Currencies | Tools',
 }
 
-const getDefaultData = async () =>
-  await getData(`${API.fakeUrl}/${API.endpoints[0]}`)
+const getDefaultData = async (url: string) => await getData(url)
 
 export default async function Currencies() {
-  const [data, error] = await getDefaultData()
+  const [data, error] = await getDefaultData(FAKE_ENDPOINT_LATEST)
+  const [currenciesList, errorCurrencies] = await getDefaultData(
+    FAKE_ENDPOINT_CURRENCIES,
+  )
 
   const defaultData = {
     currencies: [
-      data['USD'][API.baseCurrencies[0]],
-      data['USD'][API.baseCurrencies[1]],
-      data['USD'][API.baseCurrencies[2]],
+      {
+        ...data['USD'][API.baseCurrencies[0]],
+        symbol: currenciesList[API.baseCurrencies[0]].symbol,
+      },
+      {
+        ...data['USD'][API.baseCurrencies[1]],
+        symbol: currenciesList[API.baseCurrencies[1]].symbol,
+      },
+      {
+        ...data['USD'][API.baseCurrencies[2]],
+        symbol: currenciesList[API.baseCurrencies[2]].symbol,
+      },
     ],
     base: 'USD',
   }
