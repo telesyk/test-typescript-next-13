@@ -24,4 +24,9 @@ export const routes = [
     name: 'Notifications',
     tags: ['tool'],
   },
+  {
+    url: '/tool/currencies',
+    name: 'Currencies',
+    tags: ['tool'],
+  },
 ]

@@ -1,5 +1,9 @@
 import MinifyCSSTool from '@/app/components/MinifyCSSTool'
 
+export const metadata = {
+  title: 'CSS minimizer | Tools',
+}
+
 export default function CSSMinimizer() {
   return (
     <>

@@ -1,5 +1,9 @@
 import NotificationsContainer from '@/app/components/notifications'
 
+export const metadata = {
+  title: 'Notifications | Tools',
+}
+
 export default function Notifications() {
   return (
     <>
