@@ -39,23 +39,26 @@ export default async function Currencies() {
     FAKE_ENDPOINT_CURRENCIES,
   )
 
-  const defaultData = {
-    currencies: [
-      {
-        ...data['USD'][API.baseCurrencies[0]],
-        symbol: currenciesList[API.baseCurrencies[0]].symbol,
-      },
-      {
-        ...data['USD'][API.baseCurrencies[1]],
-        symbol: currenciesList[API.baseCurrencies[1]].symbol,
-      },
-      {
-        ...data['USD'][API.baseCurrencies[2]],
-        symbol: currenciesList[API.baseCurrencies[2]].symbol,
-      },
-    ],
-    base: 'USD',
-  }
+  const defaultData =
+    error || errorCurrencies
+      ? { currencies: [], base: '' }
+      : {
+          currencies: [
+            {
+              ...data['USD'][API.baseCurrencies[0]],
+              symbol: currenciesList[API.baseCurrencies[0]].symbol,
+            },
+            {
+              ...data['USD'][API.baseCurrencies[1]],
+              symbol: currenciesList[API.baseCurrencies[1]].symbol,
+            },
+            {
+              ...data['USD'][API.baseCurrencies[2]],
+              symbol: currenciesList[API.baseCurrencies[2]].symbol,
+            },
+          ],
+          base: 'USD',
+        }
 
   return (
     <>
@@ -65,9 +68,32 @@ export default async function Currencies() {
           <CurrenciesContainer data={defaultData} />
         ) : (
           <div className="p-4 bg-rose-500/30 font-mono">
-            <p>Some troubles here... Check dev-console</p>
+            <p>Some troubles here... Call the 404</p>
           </div>
         )}
+        <div className="mt-4 py-4 border-top bg-slate-500/40">
+          <div className="flex gap-2 justify-between">
+            <label className="">
+              <input
+                className="py-1 px-3 rounded-lg border"
+                type="number"
+                id="currencyBase"
+                name="currencyBase"
+                placeholder="USD"
+              />
+            </label>
+            <label className="">
+              <input
+                className="py-1 px-3 rounded-lg border"
+                type="number"
+                id="currencyChange"
+                name="currencyChange"
+                placeholder="EUR"
+              />
+            </label>
+            <div className="py-1 basis-1/5 font-bold text-right">12,34 $</div>
+          </div>
+        </div>
       </div>
     </>
   )

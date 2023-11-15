@@ -10,7 +10,7 @@ export const CurrenciesContainer = ({ data }: CurrenciesProps) => {
     base,
   }))
 
-  console.log(extendedCurrencies)
+  // console.log(extendedCurrencies)
 
   return (
     <div className="max-w-2xl mx-auto my-8 p-8 border rounded-lg bg-slate-500/40">
