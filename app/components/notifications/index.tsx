@@ -34,7 +34,7 @@ const messagesTest = [
   },
 ]
 
-const NotificationsContainer = () => {
+export default function NotificationsContainer() {
   const [notifications, setNotifications] = useState<Notification[]>([])
 
   useEffect(() => {
@@ -116,5 +116,3 @@ const NotificationsContainer = () => {
     </div>
   )
 }
-
-export default NotificationsContainer

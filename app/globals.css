@@ -4,7 +4,7 @@
 
 @layer components {
   .page {
-    @apply flex flex-col min-h-screen bg-gradient-to-r to-amber-300 from-purple-900 text-slate-50;
+    @apply flex flex-col min-h-screen bg-gradient-to-r to-amber-400 from-fuchsia-900 text-slate-50;
   }
   .container {
     @apply max-w-7xl mx-auto px-4;
@@ -19,23 +19,3 @@
     @apply py-4 text-center;
   }
 }
-
-/* 
-.page {
-  display: flex;
-  min-height: 100vh;
-  flex-direction: column;
-  --tw-bg-opacity: 1;
-  background-color: rgb(15 23 42 / var(--tw-bg-opacity));
-  --tw-text-opacity: 1;
-  color: rgb(248 250 252 / var(--tw-text-opacity));
-}
-.container {
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 48rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
-
-*/
