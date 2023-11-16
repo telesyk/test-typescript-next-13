@@ -234,6 +234,10 @@
         "code": "ETH",
         "value": 0.0005219546
       },
+      "EUR": {
+        "code": "EUR",
+        "value": 1
+      },
       "GBP": {
         "code": "GBP",
         "value": 0.8742236967
@@ -316,6 +320,10 @@
         "code": "UAH",
         "value": 36.7001447135
       },
+      "USD": {
+        "code": "USD",
+        "value": 1
+      },
       "USDT": {
         "code": "USDT",
         "value": 0.9986014541
@@ -362,6 +370,10 @@
         "code": "TRY",
         "value": 0.7766722363
       },
+      "UAH": {
+        "code": "UAH",
+        "value": 1
+      },
       "USD": {
         "code": "USD",
         "value": 0.027247849
@@ -372,6 +384,10 @@
       }
     },
     "BTC": {
+      "BTC": {
+        "code": "BTC",
+        "value": 1
+      },
       "CNY": {
         "code": "CNY",
         "value": 271246.0909463317
