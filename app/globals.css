@@ -9,11 +9,14 @@
   .container {
     @apply max-w-7xl mx-auto px-4;
   }
+  .page-header {
+    @apply bg-stone-500/50;
+  }
   .page-nav {
     @apply flex place-content-center gap-4 py-4;
   }
   .page-main {
-    @apply flex-1;
+    @apply py-8 flex-1;
   }
   .page-footer {
     @apply py-4 text-center;
