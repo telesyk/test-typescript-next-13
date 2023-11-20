@@ -1,17 +1,5 @@
 {
   "currencies": {
-    "CNY": {
-      "symbol": "CN¥",
-      "name": "Chinese Yuan",
-      "symbol_native": "CN¥",
-      "decimal_digits": 2,
-      "rounding": 0,
-      "code": "CNY",
-      "name_plural": "Chinese yuan",
-      "countries": [
-        "CN"
-      ]
-    },
     "EUR": {
       "symbol": "€",
       "name": "Euro",
@@ -64,62 +52,6 @@
         "ZW"
       ]
     },
-    "GBP": {
-      "symbol": "£",
-      "name": "British Pound Sterling",
-      "symbol_native": "£",
-      "decimal_digits": 2,
-      "rounding": 0,
-      "code": "GBP",
-      "name_plural": "British pounds sterling",
-      "countries": [
-        "GB",
-        "GG",
-        "GS",
-        "IM",
-        "JE",
-        "TA",
-        "UK",
-        "ZW"
-      ]
-    },
-    "HUF": {
-      "symbol": "Ft",
-      "name": "Hungarian Forint",
-      "symbol_native": "Ft",
-      "decimal_digits": 0,
-      "rounding": 0,
-      "code": "HUF",
-      "name_plural": "Hungarian forints",
-      "countries": [
-        "HU"
-      ]
-    },
-    "INR": {
-      "symbol": "Rs",
-      "name": "Indian Rupee",
-      "symbol_native": "টকা",
-      "decimal_digits": 2,
-      "rounding": 0,
-      "code": "INR",
-      "name_plural": "Indian rupees",
-      "countries": [
-        "BT",
-        "IN"
-      ]
-    },
-    "JPY": {
-      "symbol": "¥",
-      "name": "Japanese Yen",
-      "symbol_native": "￥",
-      "decimal_digits": 0,
-      "rounding": 0,
-      "code": "JPY",
-      "name_plural": "Japanese yen",
-      "countries": [
-        "JP"
-      ]
-    },
     "PLN": {
       "symbol": "zł",
       "name": "Polish Zloty",
@@ -130,18 +62,6 @@
       "name_plural": "Polish zlotys",
       "countries": [
         "PL"
-      ]
-    },
-    "TRY": {
-      "symbol": "TL",
-      "name": "Turkish Lira",
-      "symbol_native": "TL",
-      "decimal_digits": 2,
-      "rounding": 0,
-      "code": "TRY",
-      "name_plural": "Turkish Lira",
-      "countries": [
-        "TR"
       ]
     },
     "UAH": {
@@ -208,167 +128,77 @@
       "code": "ETH",
       "name_plural": "Ethereum",
       "countries": []
-    },
-    "USDT": {
-      "symbol": "USDT",
-      "name": "Tether",
-      "symbol_native": "USDT",
-      "decimal_digits": 2,
-      "rounding": 0,
-      "code": "USDT",
-      "name_plural": "Tethers",
-      "countries": []
     }
   },
   "latest": {
     "EUR": {
       "BTC": {
         "code": "BTC",
-        "value": 0.0000287285
-      },
-      "CNY": {
-        "code": "CNY",
-        "value": 7.7924896576
+        "value": 0.0000290584
       },
       "ETH": {
         "code": "ETH",
-        "value": 0.0005219546
+        "value": 0.0005407654
       },
       "EUR": {
         "code": "EUR",
         "value": 1
       },
-      "GBP": {
-        "code": "GBP",
-        "value": 0.8742236967
-      },
-      "HUF": {
-        "code": "HUF",
-        "value": 377.0432863519
-      },
-      "INR": {
-        "code": "INR",
-        "value": 89.0185461315
-      },
-      "JPY": {
-        "code": "JPY",
-        "value": 161.9278028044
-      },
       "PLN": {
         "code": "PLN",
-        "value": 4.414893036
-      },
-      "TRY": {
-        "code": "TRY",
-        "value": 30.4702234598
+        "value": 4.3812706717
       },
       "UAH": {
         "code": "UAH",
-        "value": 39.2317660325
+        "value": 40.0252142925
       },
       "USD": {
         "code": "USD",
-        "value": 1.0689812353
-      },
-      "USDT": {
-        "code": "USDT",
-        "value": 1.067486216
+        "value": 1.0905599839
       }
     },
     "USD": {
       "BTC": {
         "code": "BTC",
-        "value": 0.0000268746
-      },
-      "CNY": {
-        "code": "CNY",
-        "value": 7.2896412024
+        "value": 0.0000266454
       },
       "ETH": {
         "code": "ETH",
-        "value": 0.000488273
+        "value": 0.0004958603
       },
       "EUR": {
         "code": "EUR",
-        "value": 0.9354701158
-      },
-      "GBP": {
-        "code": "GBP",
-        "value": 0.8178101428
-      },
-      "HUF": {
-        "code": "HUF",
-        "value": 352.7127267452
-      },
-      "INR": {
-        "code": "INR",
-        "value": 83.274189658
-      },
-      "JPY": {
-        "code": "JPY",
-        "value": 151.4786204407
+        "value": 0.9169601074
       },
       "PLN": {
         "code": "PLN",
-        "value": 4.1300004996
-      },
-      "TRY": {
-        "code": "TRY",
-        "value": 28.5039834684
+        "value": 4.0174504257
       },
       "UAH": {
         "code": "UAH",
-        "value": 36.7001447135
+        "value": 36.7015247964
       },
       "USD": {
         "code": "USD",
         "value": 1
-      },
-      "USDT": {
-        "code": "USDT",
-        "value": 0.9986014541
       }
     },
     "UAH": {
       "BTC": {
         "code": "BTC",
-        "value": 7.323e-7
-      },
-      "CNY": {
-        "code": "CNY",
-        "value": 0.1986270425
+        "value": 7.26e-7
       },
       "ETH": {
         "code": "ETH",
-        "value": 0.0000133044
+        "value": 0.0000135106
       },
       "EUR": {
         "code": "EUR",
-        "value": 0.0254895484
-      },
-      "GBP": {
-        "code": "GBP",
-        "value": 0.0222835672
-      },
-      "HUF": {
-        "code": "HUF",
-        "value": 9.610663105
-      },
-      "INR": {
-        "code": "INR",
-        "value": 2.2690425422
-      },
-      "JPY": {
-        "code": "JPY",
-        "value": 4.1274665706
+        "value": 0.024984251
       },
       "PLN": {
         "code": "PLN",
-        "value": 0.1125336298
-      },
-      "TRY": {
-        "code": "TRY",
-        "value": 0.7766722363
+        "value": 0.1094627661
       },
       "UAH": {
         "code": "UAH",
@@ -376,11 +206,7 @@
       },
       "USD": {
         "code": "USD",
-        "value": 0.027247849
-      },
-      "USDT": {
-        "code": "USDT",
-        "value": 0.0272097416
+        "value": 0.0272468244
       }
     },
     "BTC": {
@@ -388,53 +214,51 @@
         "code": "BTC",
         "value": 1
       },
-      "CNY": {
-        "code": "CNY",
-        "value": 271246.0909463317
-      },
       "ETH": {
         "code": "ETH",
-        "value": 18.1685391022
+        "value": 18.6096184677
       },
       "EUR": {
         "code": "EUR",
-        "value": 34808.6558806655
-      },
-      "GBP": {
-        "code": "GBP",
-        "value": 30430.5518216353
-      },
-      "HUF": {
-        "code": "HUF",
-        "value": 13124370.006737595
-      },
-      "INR": {
-        "code": "INR",
-        "value": 3098615.939289201
-      },
-      "JPY": {
-        "code": "JPY",
-        "value": 5636489.165331676
+        "value": 34413.4760854817
       },
       "PLN": {
         "code": "PLN",
-        "value": 153676.4924388972
-      },
-      "TRY": {
-        "code": "TRY",
-        "value": 1060627.5230194945
+        "value": 150774.7534856771
       },
       "UAH": {
         "code": "UAH",
-        "value": 1365605.0434175145
+        "value": 1377406.7548727728
       },
       "USD": {
         "code": "USD",
-        "value": 37209.7999634095
+        "value": 37529.9599271113
+      }
+    },
+    "PLN": {
+      "BTC": {
+        "code": "BTC",
+        "value": 0.0000066324
       },
-      "USDT": {
-        "code": "USDT",
-        "value": 37157.7603504519
+      "ETH": {
+        "code": "ETH",
+        "value": 0.0001234266
+      },
+      "EUR": {
+        "code": "EUR",
+        "value": 0.2282442869
+      },
+      "PLN": {
+        "code": "PLN",
+        "value": 1
+      },
+      "UAH": {
+        "code": "UAH",
+        "value": 9.1355264925
+      },
+      "USD": {
+        "code": "USD",
+        "value": 0.2489140858
       }
     }
   }
