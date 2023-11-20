@@ -6,10 +6,9 @@ export type CurrencyProps = {
 }
 
 export type CurrenciesProps = {
-  data: {
-    currencies: CurrencyProps[]
-    base: string
-  } | null
+  currencies: any
+  latest: any
+  base: string | ''
 }
 
 export type CurrenciesExchangeProps = {
