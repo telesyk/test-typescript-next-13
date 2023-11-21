@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import { CurrenciesProps } from '@/app/types'
+import { CurrenciesContext } from '@/app/context'
 import CurrenciesRates from './CurrenciesRates'
 import CurrenciesConverter from './CurrenciesConverter'
 
@@ -11,7 +12,7 @@ export function CurrenciesContainer({
   base,
 }: CurrenciesProps) {
   const [baseCurrency, setBaseCurrency] = useState(base)
-  const [convertList, setConvertList] = useState(latest[base] || {})
+  const [convertList, setConvertList] = useState(latest[base])
 
   const rateList = Object.keys(convertList)
   const newListOptions = rateList.map((item: any) => ({
@@ -20,8 +21,17 @@ export function CurrenciesContainer({
     symbol: currencies[item].symbol,
   }))
 
+  const handleBaseList = (code: string) => setBaseCurrency(code)
+
   return (
-    <>
+    <CurrenciesContext.Provider
+      value={{
+        currencies,
+        latest: convertList,
+        base: baseCurrency,
+        handleLatestList: handleBaseList,
+      }}
+    >
       <div className="p-6 border rounded-lg bg-slate-600/50">
         <p className="mb-4 text-2xl font-bold font-mono">
           Currencies rates (base: {baseCurrency})
@@ -33,8 +43,8 @@ export function CurrenciesContainer({
         <h2 className="mb-4 text-2xl font-bold font-mono">
           Currency converter
         </h2>
-        <CurrenciesConverter latest={convertList} currencies={currencies} />
+        <CurrenciesConverter />
       </div>
-    </>
+    </CurrenciesContext.Provider>
   )
 }

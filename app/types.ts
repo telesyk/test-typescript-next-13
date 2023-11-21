@@ -9,11 +9,7 @@ export type CurrenciesProps = {
   currencies: any
   latest: any
   base: string | ''
-}
-
-export type CurrenciesExchangeProps = {
-  latest: any
-  currencies: any
+  handleLatestList?: (code: string) => void | Function
 }
 
 export type SelectProps = {

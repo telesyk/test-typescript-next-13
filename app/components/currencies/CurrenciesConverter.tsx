@@ -1,11 +1,11 @@
-import { useState } from 'react'
-import { CurrenciesExchangeProps } from '@/app/types'
+import { useContext, useState } from 'react'
+import { CurrenciesContext } from '@/app/context'
 import CurrencySelect from './CurrencySelect'
 
-export default function CurrenciesConverter({
-  latest = {},
-  currencies = {},
-}: CurrenciesExchangeProps) {
+export default function CurrenciesConverter() {
+  const { currencies, latest, base, handleLatestList } =
+    useContext(CurrenciesContext)
+
   const latestList = Object.keys(latest)
   const baseOptions = latestList.map(item => ({
     value: item,
@@ -19,7 +19,7 @@ export default function CurrenciesConverter({
   }))
 
   const [convertData, setConvertData] = useState({
-    base: latestList[0],
+    baseCurrency: base,
     change: latestList[1],
     changeRate: latest[latestList[1]].value || 0,
     changeSymbol: currencies[latestList[1]].symbol,
@@ -29,9 +29,12 @@ export default function CurrenciesConverter({
 
   const handleBaseSelect = (event: { target: { value: string } }) => {
     const currencyCode = event.target.value
+
+    handleLatestList && handleLatestList(currencyCode)
+
     setConvertData(prevData => ({
       ...prevData,
-      base: currencyCode,
+      baseCurrency: currencyCode,
       changeRate: latest[prevData.change].value,
       changeSymbol: currencies[prevData.change].symbol || prevData.change,
       result: 0,
@@ -66,7 +69,7 @@ export default function CurrenciesConverter({
         <div className="w-full my-2 text-gray-900">
           <CurrencySelect
             id="selectBaseCurrency"
-            selected={convertData.base}
+            selected={convertData.baseCurrency}
             options={baseOptions}
             handleChange={handleBaseSelect}
           />
