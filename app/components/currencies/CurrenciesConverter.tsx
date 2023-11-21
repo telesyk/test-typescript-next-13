@@ -32,8 +32,8 @@ export default function CurrenciesConverter({
     setConvertData(prevData => ({
       ...prevData,
       base: currencyCode,
-      changeRate: latest[currencyCode].value,
-      changeSymbol: currencies[currencyCode].symbol || currencyCode,
+      changeRate: latest[prevData.change].value,
+      changeSymbol: currencies[prevData.change].symbol || prevData.change,
       result: 0,
       inputValue: 0,
     }))
