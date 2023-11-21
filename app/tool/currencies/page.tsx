@@ -36,7 +36,7 @@ export default async function Currencies() {
         <span>Currencies page</span>
         <BsCurrencyExchange />
       </h2>
-      <div className="flex flex-col xl:flex-row gap-8 max-w-xl xl:max-w-5xl mx-auto p-8 rounded-lg bg-slate-100/40">
+      <div className="flex flex-col xl:flex-row gap-8 max-w-xl xl:max-w-5xl mx-auto p-8 rounded-lg bg-slate-100/40  shadow-xl shadow-pink-300">
         {!isError && isData ? (
           <CurrenciesContainer
             latest={currenciesLatest}

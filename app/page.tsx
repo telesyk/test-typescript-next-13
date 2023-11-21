@@ -8,7 +8,7 @@ export default function Home() {
     return route.tags?.includes('tool')
   })
   return (
-    <div className="max-w-lg mx-auto p-2 sm:p-8 lg:px-12 lg:py-14 rounded-xl bg-zinc-800/40">
+    <div className="max-w-lg mx-auto p-2 sm:p-8 lg:px-12 lg:py-14 rounded-xl bg-zinc-800/40 shadow-xl shadow-sky-200">
       <h1 className="text-4xl text-center leading-10">
         Testing TypeScript and NextJS!
       </h1>
@@ -19,7 +19,7 @@ export default function Home() {
           <Link
             key={route.name}
             href={route.url}
-            className="flex items-center justify-between gap-2 py-2 px-4 rounded-sm bg-slate-100/25 hover:bg-slate-100/50"
+            className="flex items-center justify-between gap-2 py-2 px-4 rounded-sm bg-slate-100/25 hover:bg-slate-100/50 hover:shadow-md hover:shadow-yellow-200"
           >
             <span>{route.name}</span>
             <FaAngleRight />
