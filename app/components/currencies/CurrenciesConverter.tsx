@@ -1,4 +1,4 @@
-import { useContext, useState } from 'react'
+import { useContext, useEffect, useState } from 'react'
 import { CurrenciesContext } from '@/app/context'
 import CurrencySelect from './CurrencySelect'
 
@@ -26,6 +26,13 @@ export default function CurrenciesConverter() {
     inputValue: 0,
     result: latest[latestList[1]].value || 0,
   })
+
+  useEffect(() => {
+    setConvertData(prevData => ({
+      ...prevData,
+      changeRate: latest[prevData.change].value,
+    }))
+  }, [base])
 
   const handleBaseSelect = (event: { target: { value: string } }) => {
     const currencyCode = event.target.value

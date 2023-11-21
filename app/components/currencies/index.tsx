@@ -21,7 +21,10 @@ export function CurrenciesContainer({
     symbol: currencies[item].symbol,
   }))
 
-  const handleBaseList = (code: string) => setBaseCurrency(code)
+  const handleBaseList = (code: string) => {
+    setBaseCurrency(code)
+    setConvertList(latest[code])
+  }
 
   return (
     <CurrenciesContext.Provider
