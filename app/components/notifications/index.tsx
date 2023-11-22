@@ -62,7 +62,7 @@ export default function NotificationsContainer() {
   }
 
   return (
-    <div className="w-full h-full flex flex-nowrap lg:flex-wrap justify-between relative">
+    <div className="w-full h-full flex justify-between sm:justify-center relative">
       <div className="basis-full sm:basis-1/2">
         {/* For test purpose only */}
         <div className="flex flex-col gap-4 my-8 px-4">
