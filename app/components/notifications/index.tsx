@@ -108,8 +108,9 @@ export default function NotificationsContainer() {
                 id={id}
                 options={options}
                 handleClick={closeNotification}
-                children={text}
-              />
+              >
+                {text}
+              </Notification>
             ))}
         </div>
       </div>

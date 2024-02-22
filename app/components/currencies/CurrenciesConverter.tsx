@@ -32,7 +32,7 @@ export default function CurrenciesConverter() {
       ...prevData,
       changeRate: latest[prevData.change].value,
     }))
-  }, [base])
+  }, [base, latest])
 
   const handleBaseSelect = (event: { target: { value: string } }) => {
     const currencyCode = event.target.value

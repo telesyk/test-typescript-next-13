@@ -203,9 +203,10 @@ function MinifyCSSTool() {
           <Notification
             id="1"
             handleClick={handleNotification}
-            children={notificationMessage}
             options={{ type: notificationType }}
-          />
+          >
+            {notificationMessage}
+          </Notification>
         )}
       </div>
 
